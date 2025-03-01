@@ -1,0 +1,39 @@
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": "./index.js",
+      "use": "@vercel/node"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/.*",
+      "dest": "index.js"
+    },
+    {
+      "src": "/users/.*",
+      "dest": "./src/routes/users.js"
+    },
+    {
+      "src": "/auth/.*",
+      "dest": "./src/routes/auth.js"
+    },
+    {
+      "src": "/fundraisers/.*",
+      "dest": "./src/routes/fundraiser.js"
+    },
+    {
+      "src": "/payment-notification/.*",
+      "dest": "./src/routes/payment.js"
+    },
+    {
+      "src": "/donations/.*",
+      "dest": "./src/routes/donations.js"
+    },
+    {
+      "src": "/mitra/.*",
+      "dest": "./src/routes/mitra.js"
+    }
+  ]
+}
